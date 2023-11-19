@@ -1,0 +1,85 @@
+.commentSection {
+    padding-bottom: 2rem;
+
+    /* border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e6ecf0; */
+}
+
+.text {
+    font-size: 1.1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1rem 1rem;
+    border: 1px solid #d0d0d0;
+
+}
+
+.replyInput {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.inputTextfield {
+    width: 80%;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.postButton {
+    background-color: #1DA1F2;
+    color: white;
+    border-radius: .7rem;
+    padding: 0.5rem 1rem;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+.postButton:hover {
+    background-color: #1A91DA;
+}
+
+.replyButton {
+    color: #777b77;
+    background-color: transparent;
+    /* border-radius: 1rem; */
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    border-width: 0 0 1px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    /* margin-top:1rem; */
+    margin-right: 1rem;
+
+
+}
+
+.replyButton:hover {
+    background-color: #E8F5FE;
+}
+
+.showRepliesButton {
+    color: #6d766d;
+    background-color: transparent;
+    /* border-radius: 1rem; */
+    padding: 0.5rem 0.5rem 0.2rem 0.5rem;
+    border-width: 0 0 1px 0;
+    font-size: 0.7rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 1rem;
+
+
+}
+
+.showRepliesButton:hover {
+    background-color: #E8F5FE;
+}
