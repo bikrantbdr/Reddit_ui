@@ -1,31 +1,22 @@
-import { useState,useEffect } from 'react';
+import { useState } from 'react';
 import Comment from './Comment';
+import insertNode from './insertNode';
 
 
 const App = () => {
-  const [comments, setComments] = useState([
+  const [comments, setComments] = useState(
     {
-      text: 'This is reply 1.',
-      replies: [
-        {
-          text: 'This is reply to reply 1.',
-        },
-        {
-          text: 'This is another reply to reply 1.',
-          replies: [
-            {
-              text: 'This is reply to second reply of reply 1.',
-            },
-          ],
-        },
-      ],
+      id: 1,
+      items: [],
     },
-    {
-      text: 'This is reply 2.',
-    },
-  ]);
+  );
 
- 
+  const handleInsertNode = (folderId, item) => {
+    const finalStructure = insertNode(comments, folderId, item);
+    setComments(finalStructure);
+  };
+
+
 
   const handleReply = (newReply, parentIndex) => {
     const newComments = [...comments];
@@ -44,9 +35,8 @@ const App = () => {
   return (
     <div>
       <h1>Comments</h1>
-      {comments.map((comment, index) => (
-        <Comment key={index} comment={comment} index={index} padding={padding} onReply={(newReply, index) => handleReply(newReply, index)} />
-      ))}
+
+      <Comment comments={comments} padding={padding} handleInsertNode={handleInsertNode} />
     </div>
   );
 };
